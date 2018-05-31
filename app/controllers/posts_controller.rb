@@ -25,5 +25,8 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
+		@post.title = params[:title]
+	  @post.description = params[:description]
+	  @post.save
 	end
 end
